@@ -8,7 +8,6 @@
 	<link href='https://fonts.googleapis.com/cc?family=Arimo' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/cc?family=Hind:300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/cc?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -17,9 +16,9 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}" method="post">
-    	<input type="text" name="STUDY HOURS" placeholder="Hours" required="required" class="form-control">
+    	<input type="text" name="STUDY HOURS" placeholder="Hours" required="required">
 
-        <button type="submit" class="btn btn-outline-primary pull-left">Predict</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
