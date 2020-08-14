@@ -8,34 +8,27 @@
 	<link href='https://fonts.googleapis.com/cc?family=Arimo' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/cc?family=Hind:300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/cc?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-  <br><br><br><br><br>
-  <div class="col-md-6 mx-auto">
-      <div class="card bg-tertiary text-white">
-          <div class="card-body">
-              <h4 class="heading h3 text-dark pt-3 pb-5">Hello There,<br>This is used to predict marks from study hours</h4>
-             <form action="{{ url_for('predict')}}" method="post">
-                  <div class="form-group">
-                      <input type="text" class="form-control" id="input_hours"
-                          placeholder="Enter study hours here" required="required">
-                  </div>
-                  <br>
-                <button type="submit" class="btn btn-outline-success btn-block btn-large">Predict</button>
-              </form>
-          </div>
-          <br><br>
-      </div>
-  </div>
-   <br>
-   <br>
+ <div class="login">
+	<h1>Predict Scores Based On Study Hours</h1>
 
-<div class="col-md-6 mx-auto">
-  "
-	{{ prediction_text }}
-  "
-</div>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+    	<input type="text" name="STUDY HOURS" placeholder="Hours" required="required" class="form-control">
+
+        <button type="submit" class="btn btn-outline-primary pull-left">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+
 
 </body>
